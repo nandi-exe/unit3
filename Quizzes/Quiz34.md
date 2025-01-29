@@ -1,6 +1,7 @@
 # Quiz 34
 
 ## Code
+```
 class Flight:
     def __init__(self, flight_number, origin, destination, departure_time, arrival_time):
         self.flight_number = flight_number
@@ -43,6 +44,8 @@ print(flight.add_passenger("Emily Banda"))
 print(flight.show_flight())
 print(flight.remove_passenger("Lungile Phiri"))
 print(flight.show_flight())
+```
+
 ## Proof of Work
 
 <img width="1470" alt="image" src="https://github.com/user-attachments/assets/c3411074-244b-4d6a-ae20-e7a8f7b1dd84" />
