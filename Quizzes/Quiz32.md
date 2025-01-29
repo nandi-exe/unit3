@@ -33,4 +33,5 @@ class HResources:
 ## Proof of Work
 <img width="1470" alt="image" src="https://github.com/user-attachments/assets/9decdacf-b5b0-4cb2-b1e8-72bd4ce8bc73" />
 ```
-##
+## Proof of Work
+![image](https://github.com/user-attachments/assets/1e3c7d3d-678a-4ef4-a384-88f51d48b66e)
