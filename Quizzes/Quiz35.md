@@ -1,6 +1,7 @@
 # Quiz 35
 
 ## Code
+```
 class Person:
     def __init__(self,name:str, age:int):
         self.name = name
@@ -19,6 +20,7 @@ class Student(Person):
 
     def get_grade(self):
         return self.grade
+```
 
 attempt = Student(name = 'Nolan', age = 14, grade = 84)
 attempt2 = Person(name = 'Nolan', age = 14)
