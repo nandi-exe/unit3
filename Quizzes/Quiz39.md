@@ -1,5 +1,9 @@
 # Quiz 39
 
+## Diagram
+
+![Screenshot 2025-01-31 at 8 26 00 AM](https://github.com/user-attachments/assets/dfbb4a47-f072-4fcd-8c74-81d441d3d70a)
+
 ## Code
 ```
 import sqlite3
@@ -36,6 +40,8 @@ cursor.execute(query_avg)
 average_length = cursor.fetchone()[0]
 
 print("The average word length is", average_length)
+
+
 
 # Close the database connection
 connection.close()
