@@ -1,5 +1,9 @@
 # Quiz 38
 
+##Instructions
+
+<img width="973" alt="image" src="https://github.com/user-attachments/assets/7589da68-e7f3-4e90-bb97-bebdd3057dbe" />
+
 ## Code
 ```
 from kivymd.app import MDApp
