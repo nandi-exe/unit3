@@ -1,5 +1,10 @@
 # Quiz 32
 
+## Paper Solution
+
+![Screenshot 2025-01-30 at 11 07 22 PM](https://github.com/user-attachments/assets/151d8a3d-0eff-497e-8fe4-699eab97e2b9)
+
+
 ## Code
 ```
 email_list = []
