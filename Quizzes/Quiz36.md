@@ -10,13 +10,13 @@ Screen:
         text: "Your Name"
         theme_text_color: "Custom"
         halign: "center"
-        font_size: "28sp"  # Changed "pt" to "sp" for consistent size handling
+        font_size: "28sp" 
 
     MDRaisedButton:
         id: button_a
         text: "Press Here"
         size_hint: 0.3, 0.3
-        font_size: "38sp"  # Changed "pt" to "sp" for consistent size handling
+        font_size: "38sp"
         text_color: "#40E0D1"
         md_bg_color: "#f07164"
         pos_hint: {"center_x": 0.5}
@@ -40,7 +40,7 @@ class quiz036(MDApp):
             self.root.ids.my_label.text_color = '#ffffff'
             self.root.ids.my_label.md_bg_color = '#000000'
             self.root.ids.button_a.md_bg_color = '#40E0D1'
-            self.root.ids.button_a.text_color = '#f07164'  # Fixed typo here (button_a instead of buttom_a)
+            self.root.ids.button_a.text_color = '#f07164'  
             self.theme = 'black'
         else:
             self.root.ids.my_label.text_color = '#000000'
