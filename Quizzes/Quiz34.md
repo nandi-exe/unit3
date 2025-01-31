@@ -1,5 +1,9 @@
 # Quiz 34
 
+## Diagrams
+
+![Screenshot 2025-01-31 at 9 40 08 AM](https://github.com/user-attachments/assets/b1db4b18-becd-4dfa-aece-624873bdfee5)
+
 ## Code
 ```
 class Flight:
