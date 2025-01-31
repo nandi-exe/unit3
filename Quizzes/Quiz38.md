@@ -77,3 +77,8 @@ ScreenManager:
 
 ```
 ## Proof of Work
+
+
+
+https://github.com/user-attachments/assets/93a1f7c0-0a8a-4c2f-b2a2-9f05588008f1
+
