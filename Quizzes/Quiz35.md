@@ -1,5 +1,9 @@
 # Quiz 35
 
+## Diagram
+
+![Screenshot 2025-01-31 at 9 45 14 AM](https://github.com/user-attachments/assets/ab8d47f7-4535-41ce-a873-2def0cb66264)
+
 ## Code
 ```
 class Person:
