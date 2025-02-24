@@ -2,7 +2,7 @@
 
 ## Paper Solution
 
-![image](https://github.com/user-attachments/assets/8aa4b76a-1dd2-4c53-92f1-871e25e83b18)
+<img width="625" alt="Screenshot 2025-02-24 at 23 07 33" src="https://github.com/user-attachments/assets/b1a912a0-92df-47af-b8d5-5e0096466bd0" />
 
 ## UML Diagram
 
