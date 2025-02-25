@@ -1,6 +1,8 @@
 # Quiz 41
 
-## Paper Solution
+## ER Diagram
+
+![Screenshot 2025-02-25 at 11 13 52 AM](https://github.com/user-attachments/assets/a4ce5295-5ac5-44ac-bd9b-3253048b8250)
 
 ## Code
 ```
@@ -81,17 +83,25 @@ class quiz040(MDApp):
         # update the percentage
         self.root.ids.hash.text = hashed_value[-50:]
 
-
     def save(self):
         try:
             base_salary = int(self.root.ids.base.text)
             ids = ["inhabitant", "income_tax", "pension", "health"]
-            deductions = {id_: int(self.root.ids[id_].text) if self.root.ids[id_].text.isdigit() else 0 for id_ in ids}
-            total = base_salary - sum((base_salary * deductions[id_]) // 100 for id_ in ids)
 
+            # Calculate deduction amounts instead of storing percentages
+            deductions = {
+                id_: (base_salary * int(self.root.ids[id_].text)) // 100
+                if self.root.ids[id_].text.isdigit() else 0
+                for id_ in ids
+            }
+
+            total = base_salary - sum(deductions.values())
+
+            # Construct the string for hashing using calculated deduction values
             for_hash = f"base{base_salary}," + ",".join(
                 [f"{id_}{deductions[id_]}" for id_ in ids]
             ) + f",total{total}"
+
             hashed_value = encrypt_password(for_hash)
 
             query = """INSERT INTO payments (base, inhabitant, income_tax, pension, health, total, hash)
@@ -100,13 +110,13 @@ class quiz040(MDApp):
             # Initialize database connection
             db = database_worker("payments.db")
 
-            # Run the query safely with parameterized values
+            # Run the query with actual deduction values
             db.run_save(query, (
                 base_salary,
-                deductions.get("inhabitant", 0),
-                deductions.get("income_tax", 0),
-                deductions.get("pension", 0),
-                deductions.get("health", 0),
+                deductions["inhabitant"],  # Save the actual deducted amounts
+                deductions["income_tax"],
+                deductions["pension"],
+                deductions["health"],
                 total,
                 hashed_value
             ))
@@ -117,9 +127,9 @@ class quiz040(MDApp):
             # Update UI with confirmation
             self.root.ids.hash.text = "Payment saved"
 
-
         except ValueError:
             self.root.ids.salary_label.text = "Invalid Input"
+
     def clear(self):
         for label in ["base", "inhabitant","income_tax","pension","health"]:
             self.root.ids[label].text = ""
@@ -149,7 +159,6 @@ test.run()
 
 ## Proof of Work
 
-<img width="1470" alt="Screenshot 2025-02-25 at 10 46 29" src="https://github.com/user-attachments/assets/2ad82242-9b4e-43ec-bbbb-6d54fb5a4b68" />
+<img width="1470" alt="Screenshot 2025-02-25 at 11 16 44" src="https://github.com/user-attachments/assets/edc8d1f6-22c9-4ded-8d88-c8e45fc0f054" />
 
-<img width="896" alt="Screenshot 2025-02-25 at 10 48 19" src="https://github.com/user-attachments/assets/0105e3e1-9481-4657-b085-ba88b477446c" />
-
+<img width="739" alt="Screenshot 2025-02-25 at 11 17 01" src="https://github.com/user-attachments/assets/512bff1e-7cd1-45d7-a9a7-22666658ae7a" />
